@@ -5,4 +5,7 @@ module.exports = {
     getBooks: booksResolver.getAll,
     getBookById: booksResolver.getById,
   },
+  Mutation: {
+    createNew: booksResolver.createNew,
+  },
 };

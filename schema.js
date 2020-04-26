@@ -1,7 +1,7 @@
 module.exports = `
   type Books {
     id: Int!
-    name: String!
+    title: String!
     genre: String!
     author_id: Int!
     created_at: String
@@ -10,6 +10,14 @@ module.exports = `
   type Query {
     getBooks: [Books]!
     getBookById(id: Int!): Books
+  }
+
+  type Mutation {
+    createNew(
+      title: String!
+      genre: String!
+      author_id: Int!
+    ):Books
   }
 `;
 
