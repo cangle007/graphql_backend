@@ -7,17 +7,29 @@ module.exports = `
     created_at: String
   }
 
+  type Authors {
+    name: String!
+    age: Int!
+  }
+
   type Query {
     getBooks: [Books]!
+    getAuthors: [Authors]!
+    getAuthorById(id: Int!): Authors
     getBookById(id: Int!): Books
   }
 
   type Mutation {
-    createNew(
+    createNewBook(
       title: String!
       genre: String!
       author_id: Int!
     ):Books
+
+    createNewAuthor(
+      name: String!
+      age: Int!
+    ): Authors
   }
 `;
 
